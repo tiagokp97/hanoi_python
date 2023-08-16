@@ -144,7 +144,12 @@ class LinkedList:
 
 
     def moveBlockFrom(self,data):
+            
+            if data.head is None or data.head.data is None:
+                 return
             head = data.head.data
+
+            
 
             #First element
             if self.isEmpty():
