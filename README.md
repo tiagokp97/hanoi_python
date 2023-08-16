@@ -6,6 +6,9 @@
 
 
 #Inicio do jogo
+
+
+
 #Pergunta 1: Com quantos discos você quer jogar? escolha um número de 3 a 13:
 #Responsa: 3
 
