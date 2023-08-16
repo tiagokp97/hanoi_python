@@ -15,7 +15,8 @@
 #Pergunta 3: Em qual coluna você quer adicionar? dois ou tres?
 #Resposta: tres
 
-[image](https://github.com/tiagokp97/hanoi_python/assets/95288951/cb56c754-a3db-4dac-8e0d-77fb6bae829f)
+![image](https://github.com/tiagokp97/hanoi_python/assets/95288951/5e4fcdb2-8818-4519-81e7-f66ccfe56a35)
+
 
 
 Resultado final do jogo:
