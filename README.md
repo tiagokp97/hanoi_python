@@ -15,11 +15,10 @@
 #Pergunta 3: Em qual coluna você quer adicionar? dois ou tres?
 #Resposta: tres
 
-![image](https://github.com/tiagokp97/hanoi_python/assets/95288951/5e4fcdb2-8818-4519-81e7-f66ccfe56a35)
-
+<img src="/src/utils/passo_1.png">
 
 
 Resultado final do jogo:
 
-![image](https://github.com/tiagokp97/hanoi_python/assets/95288951/c1a2eba7-9be1-447d-a1ba-06b82380ffeb)
+<img src="/src/utils/passo_2.png">
 
