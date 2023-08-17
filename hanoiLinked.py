@@ -69,7 +69,8 @@ class LinkedList:
         return
     
     def pop(self,pos=0):
-
+        
+        
         #Last postion index
         if pos == -1:
             pos = self.length-1
@@ -144,11 +145,10 @@ class LinkedList:
 
 
     def moveBlockFrom(self,data):
-            
             if data.head is None or data.head.data is None:
                  return
             head = data.head.data
-
+            global count
             
 
             #First element
@@ -158,7 +158,7 @@ class LinkedList:
                 self.tail = node
                 self.length += 1
                 data.pop()
-
+                count+=1
             #Insert at Head
             else:
                 if self.head.data > head:
@@ -167,6 +167,7 @@ class LinkedList:
                     self.head = node
                     self.length += 1
                     data.pop()
+                    count+=1
                     return
 
                 else:
@@ -178,18 +179,14 @@ def get_user_input(message):
     return input()     
 
 def get_column(column_number):
-    if column_number == "um":
+    if column_number == "um" or column_number == "1":
         return 'column_1'
-    elif column_number == "dois":
+    elif column_number == "dois" or column_number == "2":
         return 'column_2'
-    elif column_number == "tres":
+    elif column_number == "tres" or column_number == "3":
         return 'column_3'
-    elif column_number == "quatro":
-        return 'column_4'
-    elif column_number == "cinco":
-        return 'column_5'
     else:
-        raise ValueError("Invalid column number")         
+       get_user_input("Não é uma coluna válida, tente digitar: '1', '2' ou '3'")         
 
           
 def get_blocs(prompt):
@@ -202,6 +199,9 @@ def get_blocs(prompt):
                 get_user_input("Por favor, escolha um número de 3 a 13.")
         except ValueError:
             get_user_input("Entrada inválida. Digite um número válido.")
+
+
+      
 
 def sort_arrays(array1, array2, array3, blocks):
     new_array1 = []
@@ -243,19 +243,17 @@ columns['column_1'] = column_1
 columns['column_2'] = column_2
 columns['column_3'] = column_3
 
-
+count = 0
 while True:
     column_from = get_user_input("Quer retirar o bloco de qual coluna? um, dois ou tres?")
     column_to = get_user_input("Em qual coluna você quer adicionar? dois ou tres?")
-
     coluna1 = columns[get_column(column_from)]
     coluna2 = columns[get_column(column_to)]
     coluna2.moveBlockFrom(coluna1)
     column_1.display(column_2, column_3, int(blockNumber))
-
+    print(f"numero de jogadas {count}")
 
     if column_3.size() == blockNumber:
         print("Parabéns! Você completou o jogo!")
+        print(f"o numero de jogadas foi{count}")
         break
-
-
